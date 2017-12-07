@@ -2,12 +2,10 @@
 package org.opencps.api.controller.util;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.opencps.api.dossierfile.model.DossierFileModel;
 import org.opencps.api.dossierfile.model.DossierFileSearchResultModel;
-import org.opencps.api.dossierfile.model.DossierFileSearchResultsModel;
 import org.opencps.auth.utils.APIDateTimeUtils;
 import org.opencps.dossiermgt.constants.DossierFileTerm;
 import org.opencps.dossiermgt.model.DossierFile;
@@ -144,8 +142,6 @@ public class DossierFileUtils {
             model.setIsNew(GetterUtil.getBoolean(document.get(DossierFileTerm.IS_NEW)));
             model.setSignCheck(GetterUtil.getInteger(document.get(DossierFileTerm.SIGN_CHECK)));
             model.setSignInfo(document.get(DossierFileTerm.SIGN_INFO));
-            
-            System.out.println(model);
 
             outputs.add(model);
         }

@@ -481,8 +481,6 @@ public class DossierFileLocalServiceImpl extends DossierFileLocalServiceBaseImpl
 		String user_id = GetterUtil.getString(params.get(DossierFileTerm.USER_ID));
 		String original = GetterUtil.getString(params.get(DossierFileTerm.ORIGINAL));
 		String removed = GetterUtil.getString(params.get(DossierFileTerm.REMOVED));
-		
-		System.out.println("/////////////////////////////////////////////////// " + removed);
 
 		if (Validator.isNotNull(fileTemplateNo)) {
 			MultiMatchQuery query = new MultiMatchQuery(fileTemplateNo);
@@ -517,7 +515,7 @@ public class DossierFileLocalServiceImpl extends DossierFileLocalServiceBaseImpl
 		}
 		
 		if(Validator.isNotNull(removed)){
-			MultiMatchQuery query = new MultiMatchQuery(original);
+			MultiMatchQuery query = new MultiMatchQuery(removed);
 
 			query.addFields(DossierFileTerm.REMOVED);
 
@@ -613,7 +611,7 @@ public class DossierFileLocalServiceImpl extends DossierFileLocalServiceBaseImpl
 		}
 		
 		if(Validator.isNotNull(removed)){
-			MultiMatchQuery query = new MultiMatchQuery(original);
+			MultiMatchQuery query = new MultiMatchQuery(removed);
 
 			query.addFields(DossierFileTerm.REMOVED);
 
