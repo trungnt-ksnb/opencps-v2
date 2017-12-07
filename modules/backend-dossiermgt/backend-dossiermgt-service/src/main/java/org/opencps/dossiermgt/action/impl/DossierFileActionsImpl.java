@@ -66,8 +66,12 @@ public class DossierFileActionsImpl implements DossierFileActions {
 	@Override
 	public DossierFile deleteDossierFile(long groupId, long dossierId, String referenceUid,
 			ServiceContext serviceContext) throws PortalException {
-
-		return DossierFileLocalServiceUtil.deleteDossierFile(dossierId, referenceUid);
+		//TODO
+		//Kiem tra trang thai ho so: moi hoac y/c bo sung thi moi xoa
+		
+		//Dung co removed
+		return DossierFileLocalServiceUtil.removeDossierFile(dossierId, referenceUid, serviceContext);
+				
 	}
 
 	@Override
