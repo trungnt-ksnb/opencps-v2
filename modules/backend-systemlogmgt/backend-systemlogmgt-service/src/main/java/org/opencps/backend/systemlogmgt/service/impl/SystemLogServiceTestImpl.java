@@ -56,34 +56,38 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-			for(int i=0; i<dataParam.length(); i++) {
-				JSONObject jsonObject = null;
-				try {
-					jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				if(i==0) {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += jsonObject.get("key").toString();
-					} else {
-						paramInput += "null";
+			if(Validator.isNotNull(dataParam)) {
+				for(int i=0; i<dataParam.length(); i++) {
+					JSONObject jsonObject = null;
+					try {
+						jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
+					} catch (JSONException e) {
+						e.printStackTrace();
 					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
-					}
-				} else {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += "&"+jsonObject.get("key").toString();
-					} else {
-						paramInput += "&null";
-					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
+					if(Validator.isNotNull(jsonObject)) {
+						if(i==0) {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += jsonObject.get("key").toString();
+							} else {
+								paramInput += "null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						} else {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += "&"+jsonObject.get("key").toString();
+							} else {
+								paramInput += "&null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						}
 					}
 				}
 			}
@@ -119,34 +123,38 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-			for(int i=0; i<dataParam.length(); i++) {
-				JSONObject jsonObject = null;
-				try {
-					jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				if(i==0) {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += jsonObject.get("key").toString();
-					} else {
-						paramInput += "null";
+			if(Validator.isNotNull(dataParam)) {
+				for(int i=0; i<dataParam.length(); i++) {
+					JSONObject jsonObject = null;
+					try {
+						jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
+					} catch (JSONException e) {
+						e.printStackTrace();
 					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
-					}
-				} else {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += "&"+jsonObject.get("key").toString();
-					} else {
-						paramInput += "&null";
-					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
+					if(Validator.isNotNull(jsonObject)) {
+						if(i==0) {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += jsonObject.get("key").toString();
+							} else {
+								paramInput += "null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						} else {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += "&"+jsonObject.get("key").toString();
+							} else {
+								paramInput += "&null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						}
 					}
 				}
 			}
@@ -185,34 +193,38 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-			for(int i=0; i<dataParam.length(); i++) {
-				JSONObject jsonObject = null;
-				try {
-					jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				if(i==0) {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += jsonObject.get("key").toString();
-					} else {
-						paramInput += "null";
+			if(Validator.isNotNull(dataParam)) {
+				for(int i=0; i<dataParam.length(); i++) {
+					JSONObject jsonObject = null;
+					try {
+						jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
+					} catch (JSONException e) {
+						e.printStackTrace();
 					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
-					}
-				} else {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += "&"+jsonObject.get("key").toString();
-					} else {
-						paramInput += "&null";
-					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
+					if(Validator.isNotNull(jsonObject)) {
+						if(i==0) {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += jsonObject.get("key").toString();
+							} else {
+								paramInput += "null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						} else {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += "&"+jsonObject.get("key").toString();
+							} else {
+								paramInput += "&null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						}
 					}
 				}
 			}
@@ -238,10 +250,10 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 		}
 		// TODO Auto-generated method stub
 		String type = Thread.currentThread().getStackTrace()[1].getMethodName();
-		Integer preLine = Thread.currentThread().getStackTrace()[3].getLineNumber();
-		String preMethod = Thread.currentThread().getStackTrace()[3].getMethodName();
-		Integer line = Thread.currentThread().getStackTrace()[2].getLineNumber();
-		String method = Thread.currentThread().getStackTrace()[2].getMethodName();
+		Integer preLine = Thread.currentThread().getStackTrace()[4].getLineNumber();
+		String preMethod = Thread.currentThread().getStackTrace()[4].getMethodName();
+		Integer line = Thread.currentThread().getStackTrace()[3].getLineNumber();
+		String method = Thread.currentThread().getStackTrace()[3].getMethodName();
 		threadIdContext.set(UUID.randomUUID().toString());
 		String threadId = threadIdContext.get();
 		String paramInput = "";
@@ -252,34 +264,38 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
-			for(int i=0; i<dataParam.length(); i++) {
-				JSONObject jsonObject = null;
-				try {
-					jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
-				} catch (JSONException e) {
-					e.printStackTrace();
-				}
-				if(i==0) {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += jsonObject.get("key").toString();
-					} else {
-						paramInput += "null";
+			if(Validator.isNotNull(dataParam)) {
+				for(int i=0; i<dataParam.length(); i++) {
+					JSONObject jsonObject = null;
+					try {
+						jsonObject = JSONFactoryUtil.createJSONObject(dataParam.get(i).toString());
+					} catch (JSONException e) {
+						e.printStackTrace();
 					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
-					}
-				} else {
-					if(Validator.isNotNull(jsonObject.get("key"))) {
-						paramInput += "&"+ jsonObject.get("key").toString();
-					} else {
-						paramInput += "&null";
-					}
-					if(Validator.isNotNull(jsonObject.get("value"))) {
-						paramInput += "=" + jsonObject.get("value").toString();
-					} else {
-						paramInput += "=null";
+					if(Validator.isNotNull(jsonObject)) {
+						if(i==0) {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += jsonObject.get("key").toString();
+							} else {
+								paramInput += "null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						} else {
+							if(Validator.isNotNull(jsonObject.get("key"))) {
+								paramInput += "&"+jsonObject.get("key").toString();
+							} else {
+								paramInput += "&null";
+							}
+							if(Validator.isNotNull(jsonObject.get("value"))) {
+								paramInput += "=" + jsonObject.get("value").toString();
+							} else {
+								paramInput += "=null";
+							}
+						}
 					}
 				}
 			}
