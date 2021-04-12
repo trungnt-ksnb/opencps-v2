@@ -69,7 +69,6 @@ public class StatisticApplication extends Application {
 			@QueryParam("type") int type, @QueryParam("day") Integer day, @QueryParam("groupBy") String groupBy) {
 
 		long groupId = GetterUtil.getLong(header.getHeaderString(Field.GROUP_ID));
-
 		JSONObject result = ActionUtil.getDossierStatistic(groupId, fromDate, toDate, originalities, domainCode,
 				govAgencyCode, serviceCode, dossierStatus, day, groupBy, 0, 0, type, Constants.COUNT);
 
@@ -184,7 +183,6 @@ public class StatisticApplication extends Application {
 
 			return responseBuilder.build();
 		} else {
-
 			return Response.status(HttpURLConnection.HTTP_NO_CONTENT).build();
 		}
 	}

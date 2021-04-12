@@ -43,10 +43,10 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 		}
 		// TODO Auto-generated method stub
 		String type = Thread.currentThread().getStackTrace()[1].getMethodName();
-		Integer preLine = Thread.currentThread().getStackTrace()[3].getLineNumber();
-		String preMethod = Thread.currentThread().getStackTrace()[3].getMethodName();
-		Integer line = Thread.currentThread().getStackTrace()[2].getLineNumber();
-		String method = Thread.currentThread().getStackTrace()[2].getMethodName();
+		Integer preLine = Thread.currentThread().getStackTrace()[4].getLineNumber();
+		String preMethod = Thread.currentThread().getStackTrace()[4].getMethodName();
+		Integer line = Thread.currentThread().getStackTrace()[3].getLineNumber();
+		String method = Thread.currentThread().getStackTrace()[3].getMethodName();
 		String threadId = threadIdContext.get();
 		String paramInput = "";
 		if(Validator.isNotNull(param)) {
@@ -91,7 +91,7 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 		try {
 			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, message, type, threadId, paramInput);
 		} catch (Exception e) {
-			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), "ERROR", threadId, paramInput);
+			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), type, threadId, paramInput);
 		}
 	}
 	
@@ -106,10 +106,10 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 		}
 		// TODO Auto-generated method stub
 		String type = Thread.currentThread().getStackTrace()[1].getMethodName();
-		Integer preLine = Thread.currentThread().getStackTrace()[3].getLineNumber();
-		String preMethod = Thread.currentThread().getStackTrace()[3].getMethodName();
-		Integer line = Thread.currentThread().getStackTrace()[2].getLineNumber();
-		String method = Thread.currentThread().getStackTrace()[2].getMethodName();
+		Integer preLine = Thread.currentThread().getStackTrace()[4].getLineNumber();
+		String preMethod = Thread.currentThread().getStackTrace()[4].getMethodName();
+		Integer line = Thread.currentThread().getStackTrace()[3].getLineNumber();
+		String method = Thread.currentThread().getStackTrace()[3].getMethodName();
 		String threadId = threadIdContext.get();
 		String paramInput = "";
 		if(Validator.isNotNull(param)) {
@@ -154,7 +154,7 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 		try {
 			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, message, type, threadId, paramInput);
 		} catch (Exception e) {
-			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), "ERROR", threadId, paramInput);
+			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), type, threadId, paramInput);
 		}
 	}
 	
@@ -220,7 +220,7 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 		try {
 			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, message, type, threadId, paramInput);
 		} catch (Exception e) {
-			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), "ERROR", threadId, paramInput);
+			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), type, threadId, paramInput);
 		}
 	}
 	
@@ -287,7 +287,7 @@ public class SystemLogServiceTestImpl implements SystemLogServiceTest{
 		try {
 			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, message, type, threadId, paramInput);
 		} catch (Exception e) {
-			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), "ERROR", threadId, paramInput);
+			return SystemLogLocalServiceUtil.addSystemLog(groupId, moduleName, preLine, preMethod, line, method, e.toString(), type, threadId, paramInput);
 		}
 	}
 
